@@ -2,7 +2,7 @@ import { defineConfig } from 'tsdown'
 
 export default defineConfig([
   {
-    entry: ['src/*.ts'],
+    entry: ['src/index.ts'],
     platform: 'neutral',
     dts: {
       tsconfig: 'tsconfig.lib.json',
