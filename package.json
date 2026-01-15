@@ -1,7 +1,7 @@
 {
   "name": "@vue-spark/back-handler",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.24.0",
   "description": "Stack-based back button handler for Vue mobile applications.",
   "author": "leihaohao <https://github.com/l246804>",
