@@ -165,7 +165,7 @@ createApp(App)
     const routerHistory = router.options.history
 
     let initialPosition = 0
-    const hasRouterHistory = () => {
+    const hasRouteHistory = () => {
       return routerHistory.state.position !== initialPosition
     }
 
@@ -176,7 +176,7 @@ createApp(App)
       router.afterEach(() => {
         uni.postMessage({
           type: 'preventBackPress',
-          data: hasRouterHistory(),
+          data: hasRouteHistory(),
         })
       })
     })
@@ -195,13 +195,13 @@ createApp(App)
         // 同步更新是否拦截返回键
         uni.postMessage({
           type: 'preventBackPress',
-          data: BackHandler.stack.length > 0 || hasRouterHistory(),
+          data: BackHandler.stack.length > 0 || hasRouteHistory(),
         })
       },
 
       fallback() {
         // 有路由历史时，返回上一页
-        hasRouterHistory() && router.back()
+        hasRouteHistory() && router.back()
       },
 
       bind(handler) {
