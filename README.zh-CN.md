@@ -54,10 +54,7 @@ createApp(App)
 ### 2. 在组件中使用
 
 ```html
-<script
-  setup
-  lang="ts"
->
+<script setup lang="ts">
   import { useBackHandler } from '@vue-spark/back-handler'
   import { ref } from 'vue'
 
@@ -328,7 +325,8 @@ Dialog.setup = (props, ctx) => {
             reject(new Error('canceled'))
           },
         })
-      } else {
+      }
+      else {
         close(action)
         resolve()
       }
@@ -356,10 +354,7 @@ Dialog.setup = (props, ctx) => {
 返回 `false` 可阻止出栈，实现返回上一步：
 
 ```html
-<script
-  setup
-  lang="ts"
->
+<script setup lang="ts">
   import { useBackHandler } from '@vue-spark/back-handler'
   import { ref } from 'vue'
 

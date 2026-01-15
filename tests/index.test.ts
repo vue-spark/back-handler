@@ -139,7 +139,8 @@ describe('backHandler Plugin', () => {
 
     BackHandler.install(app, { fallback, bind, onPush })
 
-    const entry = { handler: () => {} }
+    const entry = { handler: () => {
+    } }
     BackHandler.push(entry)
 
     expect(onPush).toHaveBeenCalledWith(entry)
@@ -154,7 +155,8 @@ describe('backHandler Plugin', () => {
 
     BackHandler.install(app, { fallback, bind, onRemove })
 
-    const entry = { handler: () => {} }
+    const entry = { handler: () => {
+    } }
     BackHandler.push(entry)
     BackHandler.remove(entry)
 
@@ -172,7 +174,8 @@ describe('backHandler Plugin', () => {
 
     BackHandler.install(app, { fallback, bind, onRemove })
 
-    const entry = { handler: () => {} }
+    const entry = { handler: () => {
+    } }
     BackHandler.push(entry)
 
     const backHandler = bind.mock.calls[0][0]

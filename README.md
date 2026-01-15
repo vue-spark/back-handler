@@ -54,10 +54,7 @@ createApp(App)
 ### 2. Use in Components
 
 ```html
-<script
-  setup
-  lang="ts"
->
+<script setup lang="ts">
   import { useBackHandler } from '@vue-spark/back-handler'
   import { ref } from 'vue'
 
@@ -328,7 +325,8 @@ Dialog.setup = (props, ctx) => {
             reject(new Error('canceled'))
           },
         })
-      } else {
+      }
+      else {
         close(action)
         resolve()
       }
@@ -356,10 +354,7 @@ Dialog.setup = (props, ctx) => {
 Return `false` to prevent removal and implement "go back one step":
 
 ```html
-<script
-  setup
-  lang="ts"
->
+<script setup lang="ts">
   import { useBackHandler } from '@vue-spark/back-handler'
   import { ref } from 'vue'
 
